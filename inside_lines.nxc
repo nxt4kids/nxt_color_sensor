@@ -1,0 +1,39 @@
+#define COLORSENSOR SENSOR_2
+
+void move_forwards() {
+  OnFwd(OUT_AC, 75);
+}
+
+void move_backwards() {
+  OnRev(OUT_AC, 75);
+}
+
+void move_left() {
+  OnFwd(OUT_A, 100);
+}
+
+bool is_white() {
+  return (COLORSENSOR > 3);
+}
+
+void show_color_in_display() {
+  NumOut(0, LCD_LINE2, COLORSENSOR);
+}
+
+void turn_on_color_sensor(){
+  SetSensorColorFull(IN_2);
+}
+
+task main() {
+  turn_on_color_sensor();
+  while(true) {
+    show_color_in_display();
+    while(is_white()) {
+      move_forwards();
+    }
+    move_backwards();
+    Wait(300);
+    move_left();
+    Wait(300);
+  }
+}

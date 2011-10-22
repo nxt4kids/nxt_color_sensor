@@ -1,0 +1,7 @@
+This is an example of an NXT robot going forward as long as it
+senses white floor. If the color changes, it stops, goes back, turns left
+and then continues forward.
+
+This is done in a loop forever.
+
+
