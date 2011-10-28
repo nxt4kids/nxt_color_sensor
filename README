@@ -8,5 +8,16 @@ To compile you need to first have the nbc compiler.
 To send the file to the NXT you need the nxtcom program.
 
 You can download these from:
+http://bricxcc.sourceforge.net/nbc/
 
+If you are on OSX or linux, the simplest thing to do is to place the the nbc and nxtcom program
+in your /usr/bin directory.
+
+Go to the directory of your program, then:
+
+To compile:
+nbx -O=file_name.nxe source_file_name.nxc
+
+To send the file to the NXT:
+nxtcom -U file_name.nxe
 
