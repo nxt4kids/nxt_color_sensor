@@ -4,4 +4,9 @@ and then continues forward.
 
 This is done in a loop forever.
 
+To compile you need to first have the nbc compiler.
+To send the file to the NXT you need the nxtcom program.
+
+You can download these from:
+
 
