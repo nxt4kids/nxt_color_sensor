@@ -1,0 +1,11 @@
+void move_forward(int speed) {
+  OnFwd(OUT_AC, speed);
+}
+
+task main() {
+
+  while(true) {
+    move_forward(75);
+  } 
+
+}
